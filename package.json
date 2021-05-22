@@ -1,0 +1,26 @@
+{
+  "name": "ts-beginner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy-files": "cp -r ./src/fixtures ./dist/",
+    "clean": "rm -rf ./dist/*",
+    "build": "npm run clean && tsc && npm run copy-files",
+    "start": "npm run build && node dist/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bluebird": "^3.5.35",
+    "@types/bluebird-global": "^3.5.12",
+    "@types/node": "^15.6.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.7.2"
+  }
+}
